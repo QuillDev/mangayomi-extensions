@@ -7,7 +7,7 @@ const mangayomiSources = [{
     "typeSource": "torrent",
     "isManga": false,
     "itemType": 1,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "pkgPath": "anime/src/all/nyaa.js"
 }];
 
@@ -25,8 +25,10 @@ class DefaultExtension extends MProvider {
     }
 
     async list(params) {
-        const category = new SharedPreferences().get("preferred_categorie_page");
-        const res = await this.client.get(`${this.getBaseUrl()}/?f=0&c=${category}&${params}`);
+        const prefs = new SharedPreferences();
+        const category = prefs.get("preferred_categorie_page") || "1_0";
+        const filter = prefs.get("trusted_only") ? 2 : 0;
+        const res = await this.client.get(`${this.getBaseUrl()}/?f=${filter}&c=${category}&${params}`);
         const doc = new Document(res.body);
         const list = [];
         for (const row of doc.select("table.torrent-list > tbody > tr")) {
@@ -91,7 +93,8 @@ class DefaultExtension extends MProvider {
             type_name: "SortFilter",
             type: "SortFilter",
             name: "Sort by",
-            state: { type_name: "SortState", index: 0, ascending: false },
+            // Most seeders first: the healthiest release is usually the one to get.
+            state: { type_name: "SortState", index: 3, ascending: false },
             values: [
                 ["None", ""], ["Size", "size"], ["Date", "id"], ["Seeders", "seeders"], ["Leechers", "leechers"], ["Downloads", "downloads"],
             ].map(([name, value]) => ({ type_name: "SelectOption", name, value })),
@@ -102,7 +105,15 @@ class DefaultExtension extends MProvider {
         return [
             {
                 key: "preferred_categorie_page",
-                listPreference: { title: "Category", summary: "", valueIndex: 0, entries: ["Anime", "Live Action"], entryValues: ["1_0", "4_0"] },
+                listPreference: {
+                    title: "Category", summary: "", valueIndex: 0,
+                    entries: ["Anime", "Anime - English-translated", "Anime - Non-English-translated", "Anime - Raw", "Live Action"],
+                    entryValues: ["1_0", "1_2", "1_3", "1_4", "4_0"],
+                },
+            },
+            {
+                key: "trusted_only",
+                switchPreferenceCompat: { title: "Trusted uploads only", summary: "", value: false },
             },
             {
                 key: "torrent_description_visible",
