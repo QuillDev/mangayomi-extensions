@@ -7,7 +7,7 @@ const mangayomiSources = [{
     "typeSource": "torrent",
     "isManga": false,
     "itemType": 1,
-    "version": "0.2.0",
+    "version": "0.2.1",
     "pkgPath": "anime/src/all/nyaa.js"
 }];
 
@@ -39,7 +39,6 @@ class DefaultExtension extends MProvider {
             list.push({
                 name: title.attr("title") || title.text.trim(),
                 link: this.getBaseUrl() + title.attr("href"),
-                imageUrl: this.getBaseUrl() + row.selectFirst("td:nth-child(1) img").attr("src"),
                 description: `${size} · ${seeders} seeders`,
             });
         }
