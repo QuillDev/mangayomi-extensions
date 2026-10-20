@@ -6,7 +6,7 @@ const mangayomiSources = [
     "baseUrl": "https://net2025.cc",
     "apiUrl": "https://net2025.cc",
     "iconUrl":
-      "https://raw.githubusercontent.com/m2k3a/mangayomi-extensions/main/javascript/icon/all.netflixmirror.png",
+      "https://raw.githubusercontent.com/QuillDev/mangayomi-extensions/main/javascript/icon/all.netflixmirror.png",
     "typeSource": "single",
     "itemType": 1,
     "version": "1.0.5",

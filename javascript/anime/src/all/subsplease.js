@@ -3,7 +3,7 @@ const mangayomiSources = [{
     "lang": "all",
     "baseUrl": "https://subsplease.org",
     "apiUrl": "",
-    "iconUrl": "https://raw.githubusercontent.com/m2k3a/mangayomi-extensions/main/javascript/icon/all.subsplease.png",
+    "iconUrl": "https://raw.githubusercontent.com/QuillDev/mangayomi-extensions/main/javascript/icon/all.subsplease.png",
     "typeSource": "torrent",
     "isManga": false,
     "itemType": 1,
