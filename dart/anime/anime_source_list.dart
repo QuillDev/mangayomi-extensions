@@ -9,10 +9,8 @@ import 'src/id/otakudesu/source.dart';
 
 List<Source> dartAnimesourceList = [
   franimeSource,
-  okanimeSource,
   otakudesu,
   ...datalifeengineSourcesList,
-  animesamaSource,
   animepaheSource,
   animetoast,
   animeonlineninjaSource,
