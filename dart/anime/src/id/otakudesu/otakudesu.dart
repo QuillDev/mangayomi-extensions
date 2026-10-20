@@ -239,10 +239,10 @@ class OtakuDesu extends MProvider {
         key: "overrideBaseUrl",
         title: "Override BaseUrl",
         summary: "",
-        value: "https://otakudesu.cloud",
+        value: "https://otakudesu.blog",
         dialogTitle: "Override BaseUrl",
         dialogMessage: "",
-        text: "https://otakudesu.cloud",
+        text: "https://otakudesu.blog",
       ),
       ListPreference(
         key: "preferred_quality",

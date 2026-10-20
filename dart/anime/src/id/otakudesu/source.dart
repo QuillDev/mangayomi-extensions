@@ -6,7 +6,7 @@ const _otakudesuCodeUrl =
     "https://raw.githubusercontent.com/QuillDev/mangayomi-extensions/$branchName/dart/anime/src/id/otakudesu/otakudesu.dart";
 Source _otakudesu = Source(
   name: "OtakuDesu",
-  baseUrl: "https://otakudesu.cloud",
+  baseUrl: "https://otakudesu.blog",
   lang: "id",
   typeSource: "single",
   iconUrl:

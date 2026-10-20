@@ -343,16 +343,6 @@ class DataLifeEngine extends MProvider {
   @override
   List<dynamic> getSourcePreferences() {
     return [
-      if (source.name == "Wiflix")
-        EditTextPreference(
-          key: "overrideBaseUrl",
-          title: "Changer l'url de base",
-          summary: "",
-          value: "https://wiflix-hd.vip",
-          dialogTitle: "Changer l'url de base",
-          dialogMessage: "",
-          text: "https://wiflix-hd.vip",
-        ),
       if (source.name == "French Anime")
         EditTextPreference(
           key: "overrideBaseUrl",
@@ -400,53 +390,6 @@ class DataLifeEngine extends MProvider {
           SelectFilterOption("Animes VF", "/animes-vf/"),
           SelectFilterOption("Animes VOSTFR", "/animes-vostfr/"),
           SelectFilterOption("Films VF et VOSTFR", "/films-vf-vostfr/"),
-        ]),
-      if (source.name == "Wiflix")
-        SelectFilter("CategoriesFilter", "Catégories", 0, [
-          SelectFilterOption("<Sélectionner>", ""),
-          SelectFilterOption("Séries", "/serie-en-streaming/"),
-          SelectFilterOption("Films", "/film-en-streaming/"),
-        ]),
-      if (source.name == "Wiflix")
-        SelectFilter("GenresFilter", "Genres", 0, [
-          SelectFilterOption("<Sélectionner>", ""),
-          SelectFilterOption("Action", "/film-en-streaming/action/"),
-          SelectFilterOption("Animation", "/film-en-streaming/animation/"),
-          SelectFilterOption(
-            "Arts Martiaux",
-            "/film-en-streaming/arts-martiaux/",
-          ),
-          SelectFilterOption("Aventure", "/film-en-streaming/aventure/"),
-          SelectFilterOption("Biopic", "/film-en-streaming/biopic/"),
-          SelectFilterOption("Comédie", "/film-en-streaming/comedie/"),
-          SelectFilterOption(
-            "Comédie Dramatique",
-            "/film-en-streaming/comedie-dramatique/",
-          ),
-          SelectFilterOption(
-            "Épouvante Horreur",
-            "/film-en-streaming/horreur/",
-          ),
-          SelectFilterOption("Drame", "/film-en-streaming/drame/"),
-          SelectFilterOption(
-            "Documentaire",
-            "/film-en-streaming/documentaire/",
-          ),
-          SelectFilterOption("Espionnage", "/film-en-streaming/espionnage/"),
-          SelectFilterOption("Famille", "/film-en-streaming/famille/"),
-          SelectFilterOption("Fantastique", "/film-en-streaming/fantastique/"),
-          SelectFilterOption("Guerre", "/film-en-streaming/guerre/"),
-          SelectFilterOption("Historique", "/film-en-streaming/historique/"),
-          SelectFilterOption("Musical", "/film-en-streaming/musical/"),
-          SelectFilterOption("Policier", "/film-en-streaming/policier/"),
-          SelectFilterOption("Romance", "/film-en-streaming/romance/"),
-          SelectFilterOption(
-            "Science-Fiction",
-            "/film-en-streaming/science-fiction/",
-          ),
-          SelectFilterOption("Spectacles", "/film-en-streaming/spectacles/"),
-          SelectFilterOption("Thriller", "/film-en-streaming/thriller/"),
-          SelectFilterOption("Western", "/film-en-streaming/western/"),
         ]),
     ];
   }
