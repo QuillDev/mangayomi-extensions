@@ -13,7 +13,6 @@ import 'src/fr/franime/source.dart';
 import 'src/id/nimegami/source.dart';
 import 'src/id/otakudesu/source.dart';
 import 'src/it/animesaturn/source.dart';
-import 'src/en/donghuastream/source.dart';
 
 List<Source> dartAnimesourceList = [
   franimeSource,
@@ -30,5 +29,4 @@ List<Source> dartAnimesourceList = [
   animetoast,
   animeonlineninjaSource,
   kisskhSource,
-  donghuastreamSource,
 ];
