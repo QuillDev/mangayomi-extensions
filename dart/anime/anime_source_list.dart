@@ -1,7 +1,6 @@
 import '../../model/source.dart';
 import 'multisrc/datalifeengine/sources.dart';
 import 'src/all/animeworldindia/sources.dart';
-import 'src/all/nyaa/source.dart';
 import 'src/ar/okanime/source.dart';
 import 'src/de/animetoast/source.dart';
 import 'src/en/animepahe/source.dart';
@@ -27,7 +26,6 @@ List<Source> dartAnimesourceList = [
   yomoviesSource,
   animesamaSource,
   ...animeworldindiaSourcesList,
-  nyaaSource,
   animepaheSource,
   animetoast,
   animeonlineninjaSource,
