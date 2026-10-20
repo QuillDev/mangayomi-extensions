@@ -10,7 +10,6 @@ import 'src/fr/animesama/source.dart';
 import 'src/hi/yomovies/source.dart';
 import 'src/fr/animesultra/source.dart';
 import 'src/fr/franime/source.dart';
-import 'src/id/nimegami/source.dart';
 import 'src/id/otakudesu/source.dart';
 
 List<Source> dartAnimesourceList = [
@@ -18,7 +17,6 @@ List<Source> dartAnimesourceList = [
   animesultraSource,
   okanimeSource,
   otakudesu,
-  nimegami,
   ...datalifeengineSourcesList,
   yomoviesSource,
   animesamaSource,
